@@ -120,7 +120,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6 max-w-4xl pt-6 py-[10px] pl-[0.5vw]"
+          className="mt-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6 max-w-4xl pt-3! pb-6! py-[10px] pl-[0.5vw]"
         >
           <p className="text-sm text-[#6b6b6b] font-light tracking-wide max-w-xs leading-relaxed pt-6">
             Redefining a timeless icon.<br />Born on the Autobahn. Built for eternity.
