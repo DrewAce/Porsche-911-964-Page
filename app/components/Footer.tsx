@@ -17,9 +17,9 @@ export default function Footer() {
       className="relative py-16 bg-[#050505] border-t border-[#1a1a1a]"
       aria-label="Site footer"
     >
-      <div className="max-w-7xl mx-auto px-5 md:pl-14 md:pr-16 ml-[0.8vw]">
+      <div className="max-w-7xl mx-auto px-[15px] md:px-[48px] site-margins">
         <div className="flex flex-col md:flex-row items-center justify-between gap-10">
-          
+
           {/* Logo / Brand matching Navbar */}
           <motion.div
             initial={{ opacity: 0, y: 10 }}

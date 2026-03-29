@@ -17,11 +17,11 @@ export default function Legacy() {
   return (
     <section
       id="legacy"
-      className="relative section-padding bg-[#000000]"
+      className="relative section-padding site-margins bg-[#000000]"
       aria-label="The legacy of the Porsche 911 964"
       ref={ref}
     >
-      <div className="max-w-7xl mx-auto px-5 md:pl-14 md:pr-16 overflow-hidden ml-[0.8vw]">
+      <div className="max-w-7xl mx-auto overflow-hidden">
 
         {/* Header row */}
         <motion.div
@@ -29,7 +29,6 @@ export default function Legacy() {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
           className="flex items-center justify-between mb-24 pb-6 border-b border-[#1a1a1a]"
-          style={{ paddingLeft: "0.5vw" }}
         >
           <div className="flex items-center gap-4">
             <span className="text-[10px] font-semibold tracking-[0.5em] uppercase text-[#c41230]">04</span>
@@ -44,8 +43,7 @@ export default function Legacy() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-black leading-[0.85] text-[#f0ede8]"
-            style={{ paddingTop: "0.5vw", paddingBottom: "1vw", paddingLeft: "0.5vw", fontSize: "clamp(3rem, 10vw, 8rem)" }}
+            className="font-display font-black leading-[0.85] text-[#f0ede8] pt-[0.5vw] pb-[1vw] text-[clamp(3rem,10vw,8rem)] site-spacing"
           >
             Why the<br />
             World{" "}
@@ -83,10 +81,9 @@ export default function Legacy() {
               initial={{ opacity: 0, y: 40 }}
               animate={isInView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.8, delay: i * 0.1, ease: [0.22, 1, 0.36, 1] }}
-              className={`flex flex-col gap-6 ${i % 2 === 1 ? 'md:mt-32' : ''}`}
-              style={{ paddingLeft: "0.5vw" }}
+              className={`flex flex-col gap-6 ${i % 2 === 1 ? 'md:mt-32' : ''} `}
             >
-              <span className="font-display text-[#1a1a1a] font-black leading-none select-none" style={{ fontSize: "5rem" }}>
+              <span className="font-display text-[#1a1a1a] font-black leading-none select-none text-[5rem]">
                 {item.id}
               </span>
               <h3 className="font-display text-2xl font-bold text-[#f0ede8]">{item.title}</h3>
@@ -102,8 +99,7 @@ export default function Legacy() {
           initial={{ opacity: 0, scale: 0.95 }}
           animate={isInView ? { opacity: 1, scale: 1 } : {}}
           transition={{ duration: 1.2, delay: 0.6, ease: [0.22, 1, 0.36, 1] }}
-          className="relative py-24 md:py-32 flex flex-col items-center justify-center text-center border-t border-[#1a1a1a]"
-          style={{ paddingTop: "70px" }}
+          className="pt-[80px]! relative py-24 md:py-32 flex flex-col items-center justify-center text-center"
         >
           {/* Abstract background blur */}
           <div className="absolute inset-0 flex items-center justify-center -z-10 pointer-events-none overflow-hidden">
@@ -113,13 +109,13 @@ export default function Legacy() {
           <span className="text-[#c41230] text-8xl font-serif leading-[0] block mb-12 select-none" aria-hidden="true">
             &ldquo;
           </span>
-          <blockquote className="font-display font-black leading-[0.9] text-[#f0ede8] max-w-4xl mx-auto" style={{ fontSize: "clamp(2rem, 6vw, 4.5rem)" }}>
+          <blockquote className="font-display font-black leading-[0.9] text-[#f0ede8] max-w-4xl mx-auto text-[clamp(2rem,6vw,4.5rem)] ">
             There is no substitute.
           </blockquote>
 
           <div className="mt-12 flex items-center gap-6">
             <div className="w-12 h-px bg-[#3a3a3a]" />
-            <p className="text-[10px] tracking-[0.4em] uppercase font-semibold text-[#6b6b6b]" style={{ paddingTop: "20px" }} >
+            <p className="text-[10px] tracking-[0.4em] uppercase font-semibold text-[#6b6b6b] pt-[20px] pt-[30px]!" >
               Porsche AG
             </p>
             <div className="w-12 h-px bg-[#3a3a3a]" />

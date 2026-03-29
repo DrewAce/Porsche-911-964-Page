@@ -30,13 +30,15 @@ function GalleryCard({ item, index }: { item: typeof galleryItems[0]; index: num
     >
       {/* Real Image Background */}
       <motion.div
-        className={`absolute inset-0 bg-cover bg-no-repeat ${item.bgPos || "bg-center"}`}
+        className="absolute inset-0"
         animate={{ scale: hovered ? 1.08 : 1 }}
         transition={{ duration: 0.8, ease: [0.22, 1, 0.36, 1] }}
-        style={{
-          backgroundImage: `url(${item.img})`,
-        }}
-      />
+      >
+        <div
+          className={`absolute inset-0 bg-cover bg-no-repeat ${item.bgPos || "bg-center"}`}
+          style={{ backgroundImage: `url(${item.img})` }}
+        />
+      </motion.div>
 
       {/* Dark overlay for detail visibility */}
       <div className="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors duration-500" />
@@ -59,10 +61,14 @@ function GalleryCard({ item, index }: { item: typeof galleryItems[0]; index: num
             exit={{ opacity: 0 }}
             transition={{ duration: 0.4 }}
             className="absolute inset-0"
-            style={{
-              background: "linear-gradient(to top, rgba(196,18,48,0.15) 0%, transparent 50%)"
-            }}
-          />
+          >
+            <div
+              className="absolute inset-0"
+              style={{
+                background: "linear-gradient(to top, rgba(196,18,48,0.15) 0%, transparent 50%)"
+              }}
+            />
+          </motion.div>
         )}
       </AnimatePresence>
 
@@ -92,8 +98,8 @@ export default function Gallery() {
   const isInView = useInView(ref, { once: true, margin: "-80px" });
 
   return (
-    <section id="gallery" className="relative section-padding border-b border-[#1a1a1a]" aria-label="Photo Gallery" ref={ref}>
-      <div className="max-w-7xl mx-auto pl-10 md:pl-14 pr-8 md:pr-16 ml-[0.8vw]">
+    <section id="gallery" className="relative section-padding   border-b border-[#1a1a1a]" aria-label="Photo Gallery" ref={ref}>
+      <div className="max-w-7xl mx-auto">
 
         {/* Header content mapping editorial style */}
         <div className="grid grid-cols-1 lg:grid-cols-[1fr_2fr] gap-12 items-end mb-20">
@@ -103,11 +109,7 @@ export default function Gallery() {
             initial={{ opacity: 0, x: -20 }}
             animate={isInView ? { opacity: 1, x: 0 } : {}}
             transition={{ duration: 0.6 }}
-            style={{
-              paddingBottom: "0.5vw",
-              paddingLeft: "0.5vw"
-
-            }}
+            className="pb-[0.5vw] pl-[0.5vw] site-margins"
           >
             <div className="flex items-center gap-4 mb-8">
               <span className="text-[10px] font-semibold tracking-[0.5em] uppercase text-[#c41230]">03</span>
@@ -125,8 +127,7 @@ export default function Gallery() {
             initial={{ opacity: 0, y: 30 }}
             animate={isInView ? { opacity: 1, y: 0 } : {}}
             transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-black leading-[0.85] text-[#f0ede8] m-0 p-0"
-            style={{ paddingBottom: "0.5vw", fontSize: "clamp(3.5rem, 8vw, 7rem)" }}
+            className="font-display font-black leading-[0.85] text-[#f0ede8] m-0 p-0 text-[clamp(3.5rem,8vw,7rem)] site-margins"
           >
             Form is{" "}
             <span
@@ -143,7 +144,7 @@ export default function Gallery() {
         </div>
 
         {/* Masonry-like CSS Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4 lg:gap-6 bg-[#080808]" style={{ paddingLeft: "0.5vw" }}>
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-1 md:gap-4 lg:gap-6 bg-[#080808]">
           {galleryItems.map((item, i) => (
             <GalleryCard key={item.id} item={item} index={i} />
           ))}

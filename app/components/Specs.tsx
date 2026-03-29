@@ -19,22 +19,18 @@ export default function Specs() {
   return (
     <section
       id="specs"
-      className="section-padding bg-[#0a0a0a] border-b border-[#1a1a1a]"
+      className="section-padding site-margins bg-[#0a0a0a] border-b border-[#1a1a1a]"
       aria-label="Technical specifications"
       ref={ref}
     >
-      <div className="max-w-7xl mx-auto px-5 md:pl-14 md:pr-16 ml-[0.8vw]">
+      <div className="max-w-7xl mx-auto">
 
         {/* Header row */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          className="flex items-center justify-between mb-20 pb-6 border-b border-[#1a1a1a]"
-          style={{
-
-            paddingLeft: "0.5vw"
-          }}
+          className="flex items-center justify-between mb-20 pb-6 border-b border-[#1a1a1a] pl-[0.5vw]"
         >
           <div className="flex items-center gap-4">
             <span className="text-[10px] font-semibold tracking-[0.5em] uppercase text-[#c41230]">02</span>
@@ -51,8 +47,7 @@ export default function Specs() {
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.9, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-          className="font-display font-black text-[#f0ede8] mb-20 leading-none"
-          style={{ paddingLeft: "0.5vw", fontSize: "clamp(3rem, 8vw, 7rem)" }}
+          className="font-display font-black text-[#f0ede8] mb-20 leading-none pl-[0.5vw] text-[clamp(3rem,8vw,7rem)]"
 
         >
           By the{" "}
@@ -79,10 +74,6 @@ export default function Specs() {
               animate={isInView ? { opacity: 1, x: 0 } : {}}
               transition={{ duration: 0.6, delay: i * 0.07, ease: [0.22, 1, 0.36, 1] }}
               className="group grid grid-cols-[1fr_auto] md:grid-cols-[180px_1fr_auto] items-center py-7 gap-6 hover:bg-[#0d0d0d] transition-colors duration-300 px-2 -mx-2 cursor-default"
-              style={{
-
-                paddingLeft: "0.5vw"
-              }}
             >
               {/* Label */}
               <p className="text-[10px] font-semibold tracking-[0.35em] uppercase text-[#3a3a3a] group-hover:text-[#6b6b6b] transition-colors duration-300">
@@ -96,8 +87,7 @@ export default function Specs() {
 
               {/* Big value */}
               <p
-                className="font-display font-black text-right text-[#f0ede8] group-hover:text-white leading-none transition-colors duration-300"
-                style={{ fontSize: "clamp(2.5rem, 5vw, 4.5rem)" }}
+                className="font-display font-black text-right text-[#f0ede8] group-hover:text-white leading-none transition-colors duration-300 text-[clamp(2.5rem,5vw,4.5rem)]"
               >
                 {spec.value}
               </p>
@@ -111,10 +101,7 @@ export default function Specs() {
           animate={isInView ? { opacity: 1 } : {}}
           transition={{ duration: 1, delay: 0.8 }}
           className="text-[10px] tracking-[0.2em] uppercase text-[#2a2a2a] mt-10 text-right"
-          style={{
 
-            paddingTop: "1vw"
-          }}
         >
           Carrera 2 · Standard specification · MY 1990
         </motion.p>

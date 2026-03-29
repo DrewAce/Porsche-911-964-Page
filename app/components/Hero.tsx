@@ -23,7 +23,7 @@ export default function Hero() {
     >
       {/* Background Image / Parallax */}
       <motion.div
-        style={{ y: yText, opacity }}
+        style={{ y: yText, opacity } as any}
         className="absolute inset-0 z-0"
       >
         <div
@@ -45,8 +45,7 @@ export default function Hero() {
         initial={{ scaleY: 0 }}
         animate={{ scaleY: 1 }}
         transition={{ duration: 1.2, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-        style={{ transformOrigin: "top" }}
-        className="absolute left-6 md:left-12 top-0 bottom-0 w-px bg-[#1e1e1e]"
+        className="absolute left-[15px] md:left-[48px] top-0 bottom-0 w-px bg-[#1e1e1e] origin-top"
       />
 
       {/* Red accent top-left */}
@@ -54,24 +53,20 @@ export default function Hero() {
         initial={{ width: 0 }}
         animate={{ width: "3rem" }}
         transition={{ duration: 0.8, delay: 0.8 }}
-        className="absolute top-0 left-6 md:left-12 h-px bg-[#c41230]"
+        className="absolute top-0 left-[15px] md:left-[48px] h-px bg-[#c41230]"
       />
 
       {/* Main content — bottom left aligned */}
       <motion.div
-        style={{ y: yText, opacity }}
-        className="relative z-10 pl-10 md:pl-14 pr-8 md:pr-16 pb-20 max-w-7xl"
+        style={{ y: yText, opacity } as any}
+        className="relative z-10 site-margins pb-20 max-w-7xl mx-auto"
       >
         {/* Eyebrow row */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.4 }}
-          className="flex items-center gap-6 mb-8"
-          style={{
-
-            paddingLeft: "0.8vw"
-          }}
+          className="flex items-center gap-6 mb-8 pl-[0.8vw]"
         >
           <span className="text-[10px] font-semibold tracking-[0.5em] uppercase text-[#c41230]">
             Porsche AG
@@ -88,11 +83,7 @@ export default function Hero() {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 0.9, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
-            className="font-display font-black leading-[0.88] tracking-tight text-[#f0ede8]"
-            style={{
-              fontSize: "clamp(4.5rem, 14vw, 13rem)",
-              paddingLeft: "0.5vw"
-            }}
+            className="font-display font-black leading-[0.88] tracking-tight text-[#f0ede8] text-[clamp(4.5rem,14vw,13rem)] pl-[0.5vw]"
           >
             Porsche
           </motion.h1>
@@ -102,11 +93,7 @@ export default function Hero() {
             initial={{ y: "100%" }}
             animate={{ y: 0 }}
             transition={{ duration: 0.9, delay: 0.65, ease: [0.22, 1, 0.36, 1] }}
-            className="flex items-end gap-6"
-            style={{
-
-              paddingLeft: "0.5vw"
-            }}
+            className="flex items-end gap-6 pl-[0.5vw]"
           >
             <span
               className="font-display font-black leading-[0.88] tracking-tight"
@@ -121,8 +108,7 @@ export default function Hero() {
               911
             </span>
             <span
-              className="font-display font-black leading-[0.88] tracking-tight text-[#f0ede8] opacity-30"
-              style={{ fontSize: "clamp(4.5rem, 14vw, 13rem)" }}
+              className="font-display font-black leading-[0.88] tracking-tight text-[#f0ede8] opacity-30 text-[clamp(4.5rem,14vw,13rem)]"
             >
               964
             </span>
@@ -134,12 +120,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="mt-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6 max-w-4xl pt-6"
-          style={{
-            paddingTop: "10px",
-            paddingLeft: "0.5vw",
-            paddingBottom: "10px",
-          }}
+          className="mt-8 flex flex-col sm:flex-row sm:items-end justify-between gap-6 max-w-4xl pt-6 py-[10px] pl-[0.5vw]"
         >
           <p className="text-sm text-[#6b6b6b] font-light tracking-wide max-w-xs leading-relaxed pt-6">
             Redefining a timeless icon.<br />Born on the Autobahn. Built for eternity.
@@ -148,7 +129,7 @@ export default function Hero() {
       </motion.div>
 
       {/* Right side — vertical text */}
-      <div className="absolute right-6 md:right-12 top-1/2 -translate-y-1/2 flex flex-col items-center gap-4" aria-hidden="true">
+      <div className="absolute right-[15px] md:right-[48px] top-1/2 -translate-y-1/2 flex flex-col items-center gap-4" aria-hidden="true">
         <div className="w-px h-16 bg-[#1e1e1e]" />
         <span
           className="text-[9px] font-medium tracking-[0.4em] uppercase text-[#2a2a2a]"

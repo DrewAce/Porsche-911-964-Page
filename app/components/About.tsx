@@ -20,10 +20,10 @@ export default function About() {
     <section
       id="about"
       ref={ref}
-      className="relative section-padding border-b border-[#1a1a1a]"
+      className="relative section-padding site-margins border-b border-[#1a1a1a]"
       aria-label="About the Porsche 911 964"
     >
-      <div className="max-w-7xl mx-auto px-5 md:pl-14 md:pr-16 ml-[0.8vw]">
+      <div className="max-w-7xl mx-auto">
 
         {/* Section label row */}
         <motion.div
@@ -31,12 +31,7 @@ export default function About() {
           variants={fadeUp}
           initial="hidden"
           animate={isInView ? "visible" : "hidden"}
-          className="flex items-center justify-between mb-20 pb-6 border-b border-[#1a1a1a]"
-          style={{
-
-            paddingLeft: "0.5vw"
-          }}
-
+          className="flex items-center justify-between mb-20 pb-6 border-b border-[#1a1a1a] pl-[0.5vw]"
         >
           <div className="flex items-center gap-4">
             <span className="text-[10px] font-semibold tracking-[0.5em] uppercase text-[#c41230]">
@@ -63,14 +58,10 @@ export default function About() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               className="overflow-hidden"
-              style={{
 
-                paddingLeft: "0.5vw"
-              }}
             >
               <p
-                className="font-display font-black leading-none text-[#f0ede8]"
-                style={{ fontSize: "clamp(5rem, 10vw, 9rem)" }}
+                className="font-display font-black leading-none text-[#f0ede8] text-[clamp(5rem,10vw,9rem)]"
               >
                 Same
               </p>
@@ -81,20 +72,10 @@ export default function About() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               className="overflow-hidden"
-              style={{
 
-                paddingLeft: "0.5vw"
-              }}
             >
               <p
-                className="font-display font-black leading-none"
-                style={{
-                  fontSize: "clamp(5rem, 10vw, 9rem)",
-                  background: "linear-gradient(135deg, #c41230 0%, #ff3255 100%)",
-                  WebkitBackgroundClip: "text",
-                  WebkitTextFillColor: "transparent",
-                  backgroundClip: "text",
-                }}
+                className="font-display font-black leading-none text-gradient-red text-[clamp(5rem,10vw,9rem)]"
               >
                 But
               </p>
@@ -105,14 +86,10 @@ export default function About() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               className="overflow-hidden"
-              style={{
 
-                paddingLeft: "0.5vw"
-              }}
             >
               <p
-                className="font-display font-black leading-none text-[#f0ede8]"
-                style={{ fontSize: "clamp(5rem, 10vw, 9rem)" }}
+                className="font-display font-black leading-none text-[#f0ede8] text-[clamp(5rem,10vw,9rem)]"
               >
                 Different.
               </p>
@@ -125,10 +102,7 @@ export default function About() {
               initial="hidden"
               animate={isInView ? "visible" : "hidden"}
               className="mt-12 flex items-center gap-4"
-              style={{
 
-                paddingLeft: "0.5vw"
-              }}
             >
               <div>
                 <p className="font-display text-3xl font-bold text-[#f0ede8]">1989</p>
